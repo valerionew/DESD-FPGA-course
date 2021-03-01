@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Mar  1 10:56:45 2021
+# Process ID: 31100
+# Current directory: C:/Users/valer/DriveVero/Politecnico/4_DESD/RAM_template
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29024 C:\Users\valer\DriveVero\Politecnico\4_DESD\RAM_template\RAM_template.xpr
+# Log file: C:/Users/valer/DriveVero/Politecnico/4_DESD/RAM_template/vivado.log
+# Journal file: C:/Users/valer/DriveVero/Politecnico/4_DESD/RAM_template\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/valer/DriveVero/Politecnico/4_DESD/RAM_template/RAM_template.xpr
+update_compile_order -fileset sources_1

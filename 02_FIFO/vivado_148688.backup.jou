@@ -1,0 +1,84 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Feb 28 18:48:43 2021
+# Process ID: 148688
+# Current directory: /home/nicola/Documents/Vivado/logs
+# Command line: vivado
+# Log file: /home/nicola/Documents/Vivado/logs/vivado.log
+# Journal file: /home/nicola/Documents/Vivado/logs/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project ShiftRegister /home/nicola/Documents/DESD/Memories/ShiftRegister -part xc7a35tcpg236-1
+set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+import_files -norecurse {/home/nicola/Documents/DESD/Memories/ShiftRegister_v0.vhd /home/nicola/Documents/DESD/Memories/ShiftRegister_v1.vhd /home/nicola/Documents/DESD/Memories/ShiftRegister_v2.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse /home/nicola/Documents/DESD/Memories/tb_ShiftRegister_v0.vhd
+update_compile_order -fileset sim_1
+create_fileset -simset sim_2
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_2]
+import_files -fileset sim_2 -norecurse /home/nicola/Documents/DESD/Memories/tb_ShiftRegister_v1.vhd
+create_fileset -simset sim_3
+set_property SOURCE_SET sources_1 [get_filesets sim_3]
+import_files -fileset sim_3 -norecurse /home/nicola/Documents/DESD/Memories/tb_ShiftRegister_v2.vhd
+update_compile_order -fileset sim_3
+update_compile_order -fileset sim_3
+launch_simulation
+source tb_ShiftRegister_v0.tcl
+current_fileset -simset [ get_filesets sim_2 ]
+launch_simulation -simset [get_filesets sim_2 ]
+source tb_ShiftRegister_v1.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_2 ]
+source tb_ShiftRegister_v1.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_2 ]
+source tb_ShiftRegister_v1.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_2 ]
+source tb_ShiftRegister_v1.tcl
+archive_project /home/nicola/Documents/DESD/Memories/ShiftRegister.xpr.zip -force -include_local_ip_cache
+close_sim
+close_sim
+close_project
+create_project RAM /home/nicola/Documents/DESD/Memories/RAM -part xc7a35tcpg236-1
+set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+import_files -norecurse /home/nicola/Documents/DESD/Memories/ram.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse /home/nicola/Documents/DESD/Memories/tb_RAM_behav.wcfg
+import_files -fileset sim_1 -norecurse /home/nicola/Documents/DESD/Memories/tb_ram.vhd
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config /home/nicola/Documents/DESD/Memories/RAM/RAM.srcs/sim_1/imports/Memories/tb_RAM_behav.wcfg
+source tb_RAM.tcl
+archive_project /home/nicola/Documents/DESD/Memories/RAM.xpr.zip -force -include_local_ip_cache
+save_project_as RAM_template /home/nicola/Documents/DESD/Memories/RAM_template -force
+close_sim
+archive_project /home/nicola/Documents/DESD/Memories/RAM_template.xpr.zip -force -include_local_ip_cache
+close_project
+create_project FIFO /home/nicola/Documents/DESD/Memories/FIFO -part xc7a35tcpg236-1
+set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+import_files -norecurse /home/nicola/Documents/DESD/Memories/fifo.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse /home/nicola/Documents/DESD/Memories/tb_fifo.vhd
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_FIFO.tcl
+save_wave_config {/home/nicola/Documents/DESD/Memories/FIFO/FIFO.srcs/sim_1/imports/Memories/tb_FIFO_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/nicola/Documents/DESD/Memories/FIFO/FIFO.srcs/sim_1/imports/Memories/tb_FIFO_behav.wcfg
+set_property xsim.view /home/nicola/Documents/DESD/Memories/FIFO/FIFO.srcs/sim_1/imports/Memories/tb_FIFO_behav.wcfg [get_filesets sim_1]
+archive_project /home/nicola/Documents/DESD/Memories/FIFO.xpr.zip -force -include_local_ip_cache
+save_project_as FIFO_template /home/nicola/Documents/DESD/Memories/FIFO_template -force
+close_sim
+archive_project /home/nicola/Documents/DESD/Memories/FIFO_template.xpr.zip -force -include_local_ip_cache
